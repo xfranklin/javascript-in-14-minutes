@@ -310,13 +310,13 @@ layout: default
 <!-- 10 -->
 <div id="step10" class="step">
   <div class="content">
-    <h2>Nesting <span class="stamp is-info">info</span></h2>
+    <h2>Вложеность <span class="stamp is-info">информация</span></h2>
 
-    <p>A property of an object can be an object itself (inception!).</p>
+    <p>Свойством объекта может быть сам объект.</p>
 
-    <p>Since <code>window.location</code> is an object too, it has properties of its own. To access these properties, just add another dot <code>.</code> and the name of the property.</p>
+    <p>Поскольку <code>window.location</code> так же являеться объектом, он имеет свои собственные. Что бы получить доступ к этим свойствам, просто добавте еще одну точку <code>.</code> и имя свойства.</p>
 
-    <p>For example, the <code>href</code> property exists:</p>
+    <p>к примеру, свойство <code>href</code></p>
 
     {% capture snippet %}{% include snippets/snippet_href.md %}{% endcapture %}
     {% include partials/snippet.html contents=snippet %}
@@ -326,24 +326,24 @@ layout: default
 <!-- 11 -->
 <div id="step11" class="step">
   <div class="content">
-    {% include partials/gj.html title="Awesome!" %}
+    {% include partials/gj.html title="Потрясающие!" %}
 
-    <p>You just displayed the <strong>full URL</strong> of this webpage. This is because:</p>
+    <p>Вы только что показали <strong>полный URL</strong> этой страницы. Это потому что:</p>
 
     <ul>
-      <li><code>window</code> is an object</li>
-      <li><code>location</code> is an object</li>
-      <li><code>href</code> is a string</li>
+      <li><code>window</code> это объект</li>
+      <li><code>location</code> это объект</li>
+      <li><code>href</code> это строка</li>
     </ul>
 
     <p>
-      There's no limit to how deeply objects can be nested.
+      Нет предела тому, насколько глубоко могут быть вложены объекты.
       <br>
-      There's also no limit to the number of properties an object can have.
+      Также нет ограничений на количество свойств, которые может иметь объект.
     </p>
 
     <p>
-      As we've seen, the properties of an object can be of any type: strings, numbers, objects, and even functions. In the latter case, it's <a onclick="showStep(12);">called…</a>
+      Как мы видели, свойства объекта могут быть любого типа: строками, числами, объектами, и даже функциями. В последним случае их <a onclick="showStep(12);">называют…</a>
     </p>
   </div>
 </div>
@@ -351,11 +351,11 @@ layout: default
 <!-- 12 -->
 <div id="step12" class="step">
   <div class="content">
-    <h2>Methods <span class="stamp is-info">info</span></h2>
+    <h2>Методы <span class="stamp is-info">информация</span></h2>
 
-    <p>When an object's <strong>property</strong> is a <strong>function</strong>, it's called a <strong>method</strong> instead.</p>
+    <p>Когда <strong>свойством</strong> объекта являеться <strong>функция</strong>, оно вместо этого называеться <strong>методом</strong>.</p>
 
-    <p>Actually, the <code>alert()</code> function we've been using so far is a method of the <code>window</code> object!</p>
+    <p>На самом деле, <code>alert()</code> которую мы использовали до сих пор, это метод объекта <code>window</code>!</p>
 
     {% capture snippet %}{% include snippets/snippet_omg.md %}{% endcapture %}
     {% include partials/snippet.html contents=snippet %}
@@ -365,26 +365,26 @@ layout: default
 <!-- 13 -->
 <div id="step13" class="step">
   <div class="content">
-    {% include partials/gj.html title="OMG indeed!" %}
+    {% include partials/gj.html title="действительно OMG!" %}
 
     <p>
-      Since <code>window</code> is the top-level object in the browser, you can access all its properties and methods directly.
+      Поскольку <code>window</code> являеться объектом верхнего уровня в браузере, вы можете получить доступ ко всем его свойствам и методам напрямую.
     </p>
 
     <p>
-      That's why typing <code>location.href</code> is the same as typing <code>window.location.href</code>.
+      Поэтому напечатать, <code>location.href</code> тоже самое что и напечатать <code>window.location.href</code>.
     </p>
 
     <p>
-      Or why <code>alert()</code> is equivalent to <code>window.alert()</code>.
+      Так же и <code>alert()</code> эквивалентен <code>window.alert()</code>.
     </p>
 
     <p>
-      Objects are useful for grouping several properties under the same name and scope, and defining a <strong>hierarchy</strong> in the data. It's like a tree, where each branch can have other smaller branches.
+      Объекты полезны для группировки нескольких свойств под тем же именем и областью действия и определения <strong>иерархии</strong> данных. Это похоже на дерево, где каждая ветка может иметь другие более мелкие ветви.
     </p>
 
     <p>
-      But what if you only needed a <a onclick="showStep(14);">list of things</a>…
+      Но что, если вам нужен только <a onclick="showStep(14);">список вещей</a>…
     </p>
   </div>
 </div>
@@ -392,11 +392,11 @@ layout: default
 <!-- 14 -->
 <div id="step14" class="step">
   <div class="content">
-    <h2>Arrays <span class="stamp is-type">type</span></h2>
+    <h2>Массивы <span class="stamp is-type">тип</span></h2>
 
-    <p>A JavaScript <strong>array</strong> is a type that can contain multiple values, as if they were in an ordered list.</p>
+    <p><strong>Массив</strong> в JavaScript это тип, который может содержать несколько значений, как если бы они были в упорядочном списке.</p>
 
-    <p>Let's pass an array of <strong>3 strings</strong> to the <code>alert()</code> function:</p>
+    <p>Давай передадими массив из <strong>3 строк</strong> в функцию <code>alert()</code>:</p>
     {% capture snippet %}{% include snippets/snippet_what_is_up.md %}{% endcapture %}
     {% include partials/snippet.html contents=snippet %}
   </div>
