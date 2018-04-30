@@ -3,8 +3,8 @@ layout: default
 ---
 
 <header class="header">
-  <h1 class="title">JavaScript in <strong class="fourteen">14</strong> minutes</h1>
-  <p class="subtitle">by <a href="https://jgthms.com" target="_blank">Jeremy Thomas</a></p>
+  <h1 class="title">JavaScript за <strong class="fourteen">14</strong> минут</h1>
+  <p class="subtitle">от <a href="https://jgthms.com" target="_blank">Jeremy Thomas</a> / перевел <a href="https://github.com/xfranklin">xfranklin</a></p>
 
   <div class="block">
     <a href="https://bulma.io" target="_blank">
@@ -13,16 +13,16 @@ layout: default
   </div>
 
   <div class="content">
-    <p>Since you've already learned <a href="https://jgthms.com/web-design-in-4-minutes/" target="_blank">Web design in 4 minutes</a>, it's time to dive into the Web's main programming language: <strong>JavaScript</strong>.</p>
+    <p>Поскольку вы уже научились <a href="https://jgthms.com/web-design-in-4-minutes/" target="_blank">Веб-дизайну за 4 минуты</a>, пришло время погрузиться в главный язык Интернета: <strong>JavaScript</strong>.</p>
   </div>
 
   <!-- Case: noscript -->
   <noscript>
     <div class="message is-warning">
       <div class="message-body">
-        To learn JavaScript, you need to enable it first!
+        Что бы изучить JavaScript вам для начала нужно его включить!
         <br>
-        <a href="https://www.enable-javascript.com/" target="_blank" rel="nofollow">Learn how to enable JavaScript in your web browser</a>.
+        <a href="https://www.enable-javascript.com/" target="_blank" rel="nofollow">Узнайте как влючить JavaScript в вашем браузере.</a>.
       </div>
     </div>
     <style type="text/css">#introduction{ display: none; }</style>
@@ -33,18 +33,18 @@ layout: default
     <div class="message is-warning">
       <div class="message-body">
         <p>
-          It looks like you're on a <strong><span class="case is-mobile">mobile device</span> <span class="case is-tablet">tablet</span></strong>! 😱
+          Похоже что вы используете <strong><span class="case is-mobile">смартфон</span> <span class="case is-tablet">планшет</span></strong>! 😱
         </p>
         <p>
-          But fear not! 😊
+          Но не бойтесь! 😊
         </p>
         <p>
-          While this tutorial is not optimized for this platform, I still made it readable enough for you to enjoy.
+          Хотя этот учебник не оптимизирован для этой платформы, Я сделал его достаточно удобным, что бы вы могли им наслаждиться.
         </p>
         <p>
-          You should however revisit it on a desktop later if you can, to experience all the features!
+          Однако, позже, вам следует перезайти на сайт с компьютера, что бы испытать все возможности!
         </p>
-        <p>Anyway, <a onclick="showStep(1);">let's get started</a>!</p>
+        <p>В любом случае, <a onclick="showStep(1);">давайте начнем</a>!</p>
       </div>
     </div>
   </div>
@@ -52,11 +52,11 @@ layout: default
   <!-- Case: desktop -->
   <div id="introduction" class="case is-desktop">
     <div class="content">
-      <p>I believe you are using this:</p>
+      <p>Я думаю вы используете:</p>
 
       <div id="platform" class="detect">
         <div class="field">
-          <div class="label"><strong>Operating System</strong></div>
+          <div class="label"><strong>Операционная система</strong></div>
           <div class="select">
             <select id="os">
               <option value="">---</option>
@@ -67,7 +67,7 @@ layout: default
           </div>
         </div>
         <div class="field">
-          <div class="label"><strong>Web Browser</strong></div>
+          <div class="label"><strong>Браузер</strong></div>
           <div class="select">
             <select id="browser">
               <option value="">---</option>
@@ -81,7 +81,7 @@ layout: default
         </div>
       </div>
 
-      <p>If this information is correct, let's <a onclick="showStep(1);">get started</a>.</p>
+      <p>Если эта информация верна <a onclick="showStep(1);">давайте начнем</a>.</p>
     </div>
   </div>
 
@@ -89,9 +89,9 @@ layout: default
   <div id="return" class="message is-success">
     <div class="message-body">
       <p>
-        It looks that you've already been here! 😃
+        Выглядит так как будто вы тут уже были! 😃
         <br>
-        Do you want to <a id="resume">resume from where you left off</a> or <a id="reset">start over</a>?
+        Вы хотите <a id="resume">продолжить с того места где остановились </a> или <a id="reset">начать с начала</a>?
       </p>
     </div>
   </div>
@@ -100,47 +100,47 @@ layout: default
 <!-- 01 -->
 <div id="step1" class="step">
   <div class="content">
-    <h2>Console <span class="stamp is-tool">tool</span></h2>
+    <h2>Консоль <span class="stamp is-tool">инструмент</span></h2>
 
     <p>
-      Your browser comes with a <strong>developer console</strong> that allows you to type JavaScript directly in this webpage.
+      В ваш браузер встроена <strong>консоль разработчика</strong> это позволяет писать на JavaScript прямо на этой странице.
     </p>
 
     <div class="case is-chrome not-mobile not-tablet">
-      Since you're using <strong>Google Chrome</strong>, open the JavaScript console with
-      <span class="case is-windows is-linux"><kbd class="key">Ctrl</kbd><kbd class="plus">+</kbd><kbd class="key">Shift</kbd><kbd class="plus">+</kbd><kbd class="key">J</kbd> or <kbd class="key">F12</kbd></span>
+      Поскольку вы используете <strong>Google Chrome</strong>, откройте JavaScript консоль с помощью
+      <span class="case is-windows is-linux"><kbd class="key">Ctrl</kbd><kbd class="plus">+</kbd><kbd class="key">Shift</kbd><kbd class="plus">+</kbd><kbd class="key">J</kbd> или <kbd class="key">F12</kbd></span>
       <span class="case is-mac"><kbd class="key">⌥</kbd><kbd class="plus">+</kbd><kbd class="key">⌘</kbd><kbd class="plus">+</kbd><kbd class="key">J</kbd></span>
     </div>
 
     <div class="case is-firefox not-mobile not-tablet">
-      Since you're using <strong>Mozilla Firefox</strong>, open the Web console with
-      <span class="case is-windows is-linux"><kbd class="key">Ctrl</kbd><kbd class="plus">+</kbd><kbd class="key">Shift</kbd><kbd class="plus">+</kbd><kbd class="key">K</kbd> or <kbd class="key">F12</kbd></span>
+      Поскольку вы используете <strong>Mozilla Firefox</strong>, Откройте Веб консоль с помощью
+      <span class="case is-windows is-linux"><kbd class="key">Ctrl</kbd><kbd class="plus">+</kbd><kbd class="key">Shift</kbd><kbd class="plus">+</kbd><kbd class="key">K</kbd> или <kbd class="key">F12</kbd></span>
       <span class="case is-mac"><kbd class="key">⌥</kbd><kbd class="plus">+</kbd><kbd class="key">⌘</kbd><kbd class="plus">+</kbd><kbd class="key">K</kbd></span>
     </div>
 
     <div class="case is-edge not-mobile not-tablet">
-      Since you're using <strong>Microsoft Edge</strong>, open the JavaScript console with
+      Поскольку вы используете <strong>Microsoft Edge</strong>, откройте JavaScript консоль с помощью
       <span class="case is-windows"><kbd class="key">F12</kbd></span>
     </div>
 
     <div class="case is-opera not-mobile not-tablet">
-      Since you're using <strong>Opera</strong>, open the JavaScript console with
+      Поскольку вы используете <strong>Opera</strong>, откройте JavaScript консоль с помощью
       <span class="case is-windows is-linux"><kbd class="key">Ctrl</kbd><kbd class="plus">+</kbd><kbd class="key">Shift</kbd><kbd class="plus">+</kbd><kbd class="key">I</kbd></span>
       <span class="case is-mac"><kbd class="key">⌥</kbd><kbd class="plus">+</kbd><kbd class="key">⌘</kbd><kbd class="plus">+</kbd><kbd class="key">I</kbd></span>
     </div>
 
     <div class="case is-safari not-mobile not-tablet">
-      <p>Since you're using <strong>Apple Safari</strong>:</p>
+      <p>Поскольку вы используете <strong>Apple Safari</strong>:</p>
       <ol>
-        <li>Go to <strong>Preferences</strong> with <kbd class="key">⌘</kbd><kbd class="plus">+</kbd><kbd class="key">,</kbd></li>
-        <li>Go to the <strong>Advanced</strong> tab</li>
-        <li>Enable <strong>Show Develop menu in menu bar</strong></li>
-        <li>Open the JavaScript console <kbd class="key">⌥</kbd><kbd class="plus">+</kbd><kbd class="key">⌘</kbd><kbd class="plus">+</kbd><kbd class="key">C</kbd></li>
+        <li>Перейдите к  <strong>Настойкам</strong> с помощью <kbd class="key">⌘</kbd><kbd class="plus">+</kbd><kbd class="key">,</kbd></li>
+        <li>Перейдите к<strong>Дополнительным</strong></li>
+        <li>Включите <strong>Показывать меню разработчика</strong></li>
+        <li>Откройте JavaScript консоль <kbd class="key">⌥</kbd><kbd class="plus">+</kbd><kbd class="key">⌘</kbd><kbd class="plus">+</kbd><kbd class="key">C</kbd></li>
       </ol>
     </div>
 
-    <p>Let's see if it works!</p>
-    <p>In the console, type (or paste) the following, and press <kbd class="key">Enter</kbd></p>
+    <p>Посмотрим, сработает ли это!</p>
+    <p>В консоли, напечатайте (или вставте) слудующее и нажмите <kbd class="key">Enter</kbd></p>
   </div>
 
   {% capture snippet %}{% include snippets/snippet_hello_world.md %}{% endcapture %}
@@ -151,80 +151,80 @@ layout: default
 <div id="step2" class="step">
   <div class="content">
     {% include partials/gj.html %}
-    <p>You've just used <code>alert()</code>, a native <strong>JavaScript function</strong> that comes with every browser.</p>
+    <p>Вы только что использовали <code>alert()</code>, нативную <strong>JavaScript функщию</strong> которая есть в каждом браузере.</p>
 
-    <p>But what have you <a onclick="showStep(3);">done exactly</a>?</p></div>
+    <p>Но что вы <a onclick="showStep(3);"> сделали</a>?</p></div>
   </div>
 </div>
 
 <!-- 03 -->
 <div id="step3" class="step">
   <div class="content">
-    <h2>Functions <span class="stamp is-concept">concept</span></h2>
-    <p>You've <strong>called</strong> the <code>alert()</code> <em>function</em> with the <code>'Hello&nbsp;World!'</code> <em>parameter</em>.</p>
+    <h2>Функции <span class="stamp is-concept">концепция</span></h2>
+    <p>Bы <strong>вызвали</strong> <code>alert()</code> <em>функщию</em> с <em>параметром</em> <code>'Hello&nbsp;World!'</code>.</p>
 
-    <p>You have basically done 4 things:</p>
+    <p>В основном вы сделали 4 вещи:</p>
 
     <div class="stabs">
       <div class="stab">
-        <div class="stab-label">you typed the <strong>name</strong> of the function</div>
+        <div class="stab-label">вы напечатли <strong>имя</strong> этой функции</div>
         <div class="stab-code"><code class="stabilo"><span class="is-blue">alert</span>('Hello World!')</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you opened a <strong>parenthesis</strong></div>
+        <div class="stab-label">вы открыли <strong>круглую скобку</strong></div>
         <div class="stab-code"><code class="stabilo">alert<span class="is-black">(</span>'Hello World!')</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed a <strong>parameter</strong></div>
+        <div class="stab-label">вы напечатали <strong>параметр</strong></div>
         <div class="stab-code"><code class="stabilo">alert(<span class="is-green">'Hello World!'</span>)</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you <strong>closed</strong> the parenthesis</div>
+        <div class="stab-label">вы <strong>закрыли</strong> круглую скобку</div>
         <div class="stab-code"><code class="stabilo">alert('Hello World!'<span class="is-black">)</span></code></div>
       </div>
     </div>
 
-    <p>Sometimes, there's no parameter.<br>
-    Sometimes, there's multiple parameters.<br>
-    Most of them are required, but some of them can be optional.</p>
+    <p>Иногда в фунции нет параметров<br>
+    Иногда несколько параметров<br>
+    Большинство из них необходимы, но некоторые могут быть пропущены</p>
 
-    <p>In this case, <code>alert()</code> requires only one parameter.</p>
+    <p>В этом случае <code>alert()</code> использует только один параметр, но некоторые могут использоваться по желанию</p>
 
-    <p>But what <a onclick="showStep(4);">type of parameter</a> is that?</p>
+    <p>Но какой <a onclick="showStep(4);">тип этого параметра?</a></p>
   </div>
 </div>
 
 <!-- 04 -->
 <div id="step4" class="step">
   <div class="content">
-    <h2>Strings <span class="stamp is-type">type</span></h2>
+    <h2>Строки <span class="stamp is-type">тип</span></h2>
 
-    <p>When you handle text, you're using <strong>strings</strong>, which are a series of <em>characters</em>. In our case, we used a series of <strong>12 characters</strong>: <code>Hello World!</code>. This includes all lowercase and uppercase letters, the space, and the exclamation point.</p>
+    <p>Когда вы обрабатываете текст, вы используете <strong>строки</strong>, которые представляют из себя <em>символы</em>. В нашем случае мы используем последовательность из <strong>12 символов</strong>: <code>Hello World!</code>. Строка включает в себя все буквы верхнего и нижнего регистров, пробелы, и восклицательный знак.</p>
 
-    <p>To define where the string <em>starts</em> and where it <em>ends</em>, you need to wrap it in <strong>quotes</strong> (either single <code>'</code> or double <code>"</code>).</p>
+    <p>Чтобы определить, где строка <em>начитаеться</em> и где она <em>заканчиваеть</em>, вам надо обернуть их в <strong>кавычки</strong> (одинарные<code>'</code> или двойные <code>"</code>).</p>
 
-    <p>When you defined the <code>'Hello World!'</code> string:</p>
+    <p>Когда вы определили строку<code>'Hello World!'</code></p>
 
     <ol>
-      <li>you typed a single <strong>quote</strong></li>
-      <li>you typed the <strong>12 characters</strong></li>
-      <li>you typed another single <strong>quote</strong></li>
+      <li>вы напечатали одинарную <strong>кавычку</strong></li>
+      <li>вы напечатали <strong>12 символов</strong></li>
+      <li>вы напечатали другую<strong>кавычку</strong></li>
     </ol>
 
-    <p>What if you wanted to deal with <a onclick="showStep(5);">numbers instead</a>?</p>
+    <p>Что, если вы бы хотели использовать <a onclick="showStep(5);">цифры</a>?</p>
   </div>
 </div>
 
 <!-- 05 -->
 <div id="step5" class="step">
   <div class="content">
-    <h2>Numbers <span class="stamp is-type">type</span></h2>
+    <h2>Числа <span class="stamp is-type">тип</span></h2>
 
-    <p>Like any other programming language, JavaScript can handle <strong>numbers</strong>.</p>
+    <p>Как и другие языки программированя, JavaScript работает с <strong>числами</strong>.</p>
 
-    <p>These numbers can be big or small, with or without decimals, combined through numeric operations…</p>
+    <p>Числа могут быть большими и маленькими, с десятичными знаками или без них, над ними можно выполнять математические операции…</p>
 
-    <p>Type or paste the following snippet in your console:</p>
+    <p>Напечатайте или вставьте следующий фрагмент в вашу консоль:</p>
   </div>
 
   {% capture snippet %}{% include snippets/snippet_numbers.md %}{% endcapture %}
@@ -234,29 +234,29 @@ layout: default
 <!-- 06 -->
 <div id="step6" class="step">
   <div class="content">
-    {% include partials/gj.html title="Perfect!" %}
+    {% include partials/gj.html title="Превосходно!" %}
 
-    <p>Notice a few things:</p>
+    <p>Отметьте несколько вещей:</p>
 
     <ul>
-      <li>you're using the <code>+</code> and <code>*</code> <strong>operators</strong></li>
-      <li>the <strong>mathematical order</strong> is respected: first <code>5 * 3</code> is calculated, then <code>9 + 15</code></li>
-      <li>the <strong>spaces</strong> around the <code>*</code> symbol don't affect the output ; they're just here to help us (humans!) <em>read</em> the code.</li>
+      <li>вы используете  <strong>операторы</strong> <code>+</code> и <code>*</code></li>
+      <li><strong>математический порядок</strong> соблюдаеться: первым считаеться <code>5 * 3</code>, затем <code>9 + 15</code></li>
+      <li><strong>пробелы</strong> вокруг символа <code>*</code> не влияет на результат; они здесь для того чтобы помочь нам (людям!) <em>читать</em> код.</li>
     </ul>
 
-    <p>You can find numbers in <a onclick="showStep(7);">lots of places</a>.</p>
+    <p>Числа используються <a onclick="showStep(7);">во многих местах</a>.</p>
   </div>
 </div>
 
 <!-- 07 -->
 <div id="step7" class="step">
   <div class="content">
-    <h2>Browser dimensions <span class="stamp is-info">info</span></h2>
-    <p>Numbers are everywhere! Especially in a browser.</p>
+    <h2>Размеры браузера <span class="stamp is-info">информация</span></h2>
+    <p>Числа везде! Особенно в браузере.</p>
 
-    <p>For example, your current browser window has a certain <strong>width</strong> that you can access with JavaScript.</p>
+    <p>К примеры, ваш браузер имеет определеную <strong>ширину</strong> вы можте получить ее с помощью JavaScript.</p>
 
-    <p>Type the following:</p>
+    <p>Напечатайте следующее:</p>
 
     {% capture snippet %}{% include snippets/snippet_innerwidth.md %}{% endcapture %}
     {% include partials/snippet.html contents=snippet %}
@@ -266,44 +266,44 @@ layout: default
 <!-- 08 -->
 <div id="step8" class="step">
   <div class="content">
-    {% include partials/gj.html title="Wonderful!" %}
+    {% include partials/gj.html title="Замечательно!" %}
 
     <p>
-      This means your browser's window is <strong id="browserWidth">1680</strong> pixels wide.
+      Это означает, что ширина окна браузера состовляет <strong id="browserWidth">1680</strong> пикселей.
     </p>
 
     <p>
-      As you would have guessed, <code>window.innerHeight</code> exists as well, as does <code>window.scrollY</code>, which gives you the current scroll position.
+      Как вы уже догодались <code>window.innerHeight</code> также существует, как и <code>window.scrollY</code>, который дает вам текущую позицию прокрутки.
     </p>
 
-    <p>But what is <code>window</code> <a onclick="showStep(9);">exactly</a>?</p>
+    <p>Но что такое <code>window</code> <a onclick="showStep(9);">в точку</a>?</p>
   </div>
 </div>
 
 <!-- 09 -->
 <div id="step9" class="step">
   <div class="content">
-    <h2>Objects <span class="stamp is-type">type</span></h2>
+    <h2>Объекты <span class="stamp is-type">тип</span></h2>
 
     <p>
-      <code>window</code> is a JavaScript <strong>object</strong>.
+      <code>window</code> это <strong>объект</strong> JavaScript.
     </p>
     <p>
-      <code>innerWidth</code> is a <strong>property</strong> of the <code>window</code> object.
+      <code>innerWidth</code> это <strong>свойство</strong> объекта <code>window</code>.
       <br>
-      To access this property, you used a dot <code>.</code> to specify you wanted the <code>innerWidth</code> that exists <em>within</em> the <code>window</code> object.
+      Для доступа к свойству, вы должны использовать точку <code>.</code> чтобы узазать <code>innerWidth</code> который существует <em>в пределах</em> объекта <code>window</code>.
     </p>
 
-    <p>The JavaScript object is basically a <strong>type</strong> that contains other things.</p>
-    <p>For example, <code>window</code> also has:</p>
+    <p>Объекты в JavaScript в основном являються <strong>типом</strong> который содержит другие типы.</p>
+    <p>К примеру, <code>window</code> имеет еще такие свойства:</p>
 
     <ul>
-      <li><code>window.origin</code> which is a string</li>
-      <li><code>window.scrollY</code> which is a number</li>
-      <li><code>window.location</code> which is an object</li>
+      <li><code>window.origin</code> которое являеться строкой</li>
+      <li><code>window.scrollY</code> которое являеться числом</li>
+      <li><code>window.location</code> которое являеться объектом</li>
     </ul>
 
-    <p>If <code>window</code> is an object that contains <code>location</code> which is another object, this means that <a onclick="showStep(10);">JavaScript objects support</a>…</p>
+    <p>Если <code>window</code> объект, который содержит <code>location</code> который являеться другим объектом, это означает что <a onclick="showStep(10);">JavaScript поддерживает объекты</a>…</p>
   </div>
 </div>
 
