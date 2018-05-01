@@ -405,45 +405,45 @@ layout: default
 <!-- 15 -->
 <div id="step15" class="step">
   <div class="content">
-    {% include partials/gj.html title="Exactly!" %}
+    {% include partials/gj.html title="Именно!" %}
 
     <p>
-      You already know the syntax for calling the <code>alert</code> function: <code>alert(parameter)</code>.
+      Вы уже знаете синтаксис для вызова функции <code>alert</code>: <code>alert(parameter)</code>.
     </p>
 
     <p>
-      In this case, the parameter is an array with 3 items that you have defined like this:
+      В данном случае параметр представляет собой массив из 3 элементов, которые вы определили следующим образом:
     </p>
 
     <div class="stabs">
       <div class="stab">
-        <div class="stab-label">you opened a <strong>square bracket</strong></div>
+        <div class="stab-label">вы открыли <strong>квадратную скобку</strong></div>
         <div class="stab-code"><code class="stabilo"><span class="is-black">[</span>'What', 'is', 'up']</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed the <strong>first item</strong> of the array, a string</div>
+        <div class="stab-label">вы напечатали <strong>первый элемент</strong> of the array, a string</div>
         <div class="stab-code"><code class="stabilo">[<span class="is-green">'What'</span>, 'is', 'up']</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed a <strong>comma</strong> to separate the items</div>
+        <div class="stab-label">вы напечатали <strong>запятую</strong> для разделения элементов</div>
         <div class="stab-code"><code class="stabilo">['What'<span class="is-black">,</span> 'is', 'up']</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you added <strong>two other items</strong> to the list</div>
+        <div class="stab-label">вы добавили <strong>два остальных элемента</strong> to the list</div>
         <div class="stab-code"><code class="stabilo">['What', <span class="is-green">'is'</span><span class="is-black">, </span><span class="is-green">'up'</span>]</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you <strong>closed</strong> the square bracket</div>
+        <div class="stab-label">вы <strong>закрыли</strong> квадратную скобку</div>
         <div class="stab-code"><code class="stabilo">['What', 'is', 'up'<span class="is-black">]</span></code></div>
       </div>
     </div>
 
     <p>
-      An array can contain any <strong>type</strong> of values: strings, numbers, objects, other arrays, and <em>more</em>…
+      Массив может содержать любые <strong>типы</strong> значений: строки, числа, объекты, другие массивы, и <em>т. д.</em>…
     </p>
 
     <p>
-      Try out this snippet:
+     Попробуйте этот фрагмент:
     </p>
 
     {% capture snippet %}{% include snippets/snippet_list.md %}{% endcapture %}
@@ -454,17 +454,17 @@ layout: default
 <!-- 16 -->
 <div id="step16" class="step">
   <div class="content">
-    {% include partials/gj.html title="True!" %}
+    {% include partials/gj.html title="Правильно!" %}
 
     <p>
-      The first item <code>2 + 5</code> is a number, while the second one <code>'samurai'</code> is a string.
+      Первый элемент <code>2 + 5</code> это число, а второй <code>'samurai'</code> это строка.
     </p>
 
     <p>
-      What about the <strong>third parameter</strong>? It's not a string because it's not wrapped in quotes, and it's not a number either.
+      Как насчет <strong>третего элемента</strong>? Это не строка, потому что она не заключена в кавычки, и это тоже не число.
     </p>
     <p>
-      So <a onclick="showStep(17);">what is it</a>?
+      И так <a onclick="showStep(17);">что же это</a>?
     </p>
   </div>
 </div>
@@ -472,16 +472,16 @@ layout: default
 <!-- 17 -->
 <div id="step17" class="step">
   <div class="content">
-    <h2>Booleans <span class="stamp is-type">type</span></h2>
+    <h2>Логический (Булевый) <span class="stamp is-type">тип</span></h2>
 
-    <p>While strings and numbers have an infinite amount of <em>possible</em> values, a <strong>boolean</strong> can only be either <code>true</code> or <code>false</code>.</p>
+    <p>Хоть строки и числа имеют бесконечное количество <em>возможных </em> значений, <strong>булевый</strong> тип может быть либо <code>true</code> либо <code>false</code>.</p>
 
     <p>
-      By combining the <code>alert()</code> function and the 3-item array on a <em>single</em> line, it makes our code less readable.
+      Объединив функцию <code>alert()</code> и массив из 3 элементов в <em>одной</em> строке, это делает наш код менее читаемым.
     </p>
 
     <p>
-      What if we could split the two by moving the array onto <a onclick="showStep(18);">its own line</a>?
+      Что, если бы мы могли разбить их, переместив массив <a onclick="showStep(18);">в одну строку</a>?
     </p>
   </div>
 </div>
@@ -489,14 +489,14 @@ layout: default
 <!-- 18 -->
 <div id="step18" class="step">
   <div class="content">
-    <h2>Variables <span class="stamp is-concept">concept</span></h2>
+    <h2>Переменные <span class="stamp is-concept">концепция</span></h2>
 
     <p>
-      We can move the array into a <strong>variable</strong>.
+      Мы можем поместить массив в <strong>переменную</strong>.
     </p>
 
     <p>
-      A variable is a <strong>container</strong> that stores a certain <strong>value</strong>. It has a <strong>name</strong> (so you can identify and re-use it), and it has a <strong>value</strong> (so you can update it later on).
+      Переменная это <strong>контейнер</strong>, в котором хранится определенное <strong>значение</strong>. У него есть <strong>имя</strong> (так что вы можете идентифицировать и повторно использовать его),  и оно имеет <strong>значение</strong> (так что вы можете обновить его позже).
     </p>
 
     {% capture snippet %}{% include snippets/snippet_array.md %}{% endcapture %}
@@ -504,50 +504,50 @@ layout: default
 
     <ul>
       <li>
-        <code>my_things</code> is the <strong>name</strong> of the variable
+        <code>my_things</code> это <strong>имя</strong> переменной
       </li>
       <li>
-        <code>[2 + 5, 'samurai', true]</code> is the <strong>value</strong> of the variable
+        <code>[2 + 5, 'samurai', true]</code> это <strong>значение</strong> переменной
       </li>
     </ul>
 
     <p>
-      Here's the breakdown:
+      Вот разбор:
     </p>
 
     <div class="stabs is-vertical">
       <div class="stab">
-        <div class="stab-label">you typed the <strong>keyword</strong> <code>var</code></div>
+        <div class="stab-label">вы напечатали <strong>ключевое слово</strong> <code>var</code></div>
         <div class="stab-code"><code class="stabilo"><span class="is-purple">var</span> my_things = [2 + 5, 'samurai', true];</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed the <strong>name</strong> of the variable</div>
+        <div class="stab-label">вы напечатали <strong>имя</strong> переменной</div>
         <div class="stab-code"><code class="stabilo">var <span class="is-blue">my_things</span> = [2 + 5, 'samurai', true];</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed the <strong>assignment</strong> operator <code>=</code></div>
+        <div class="stab-label">вы напечатали оператор <strong>присвоения</strong> <code>=</code></div>
         <div class="stab-code"><code class="stabilo">var my_things <span class="is-purple">=</span> [2 + 5, 'samurai', true];</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed the <strong>array</strong></div>
+        <div class="stab-label">вы напечатали <strong>массив</strong></div>
         <div class="stab-code"><code class="stabilo">var my_things = <span class="is-black">[</span><span class="is-red">2</span><span class="is-purple"> + </span><span class="is-red">5</span><span class="is-black">, </span><span class="is-green">'samurai'</span><span class="is-black">, </span><span class="is-purple">true</span><span class="is-black">]</span>;</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed a <strong>semicolon</strong> to end the statement</div>
+        <div class="stab-label">вы напечатали <strong>точку с запятой</strong> что бы завершить инструкцию</div>
         <div class="stab-code"><code class="stabilo">var my_things = [2 + 5, 'samurai', true]<span class="is-black">;</span></code></div>
       </div>
     </div>
 
     <p>
-      This means that <code>my_things</code> is equal to <code>[2 + 5, 'samurai', true]</code>.
+      Это означает, что <code>my_things</code> равно <code>[2 + 5, 'samurai', true]</code>.
     </p>
 
     <p>
-      We can now reinstate the <code>alert</code> function:
+      Теперь мы можем восстановить функцию  <code>alert</code>:
     </p>
 
     <p>
-      Since we now have <em>two statements</em>, we need to separate them with a <strong>semicolon</strong> <code>;</code> in order to know where one ends and the next one begins.
+      Поскольку у нас теперь есть <em>две инструкции</em>,  нам нужно отделить их <strong>точкой с запятой</strong> <code>;</code> чтобы узнать, где заканчивается, и начинается следующая инструкция.
     </p>
 
     {% capture snippet %}{% include snippets/snippet_array_alert.md %}{% endcapture %}
