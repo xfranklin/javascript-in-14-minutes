@@ -384,7 +384,7 @@ layout: default
     </p>
 
     <p>
-      Но что, если вам нужен только <a onclick="showStep(14);">список вещей</a>…
+      Но что, если вам нужен только <a onclick="showStep(14);">список элементов</a>…
     </p>
   </div>
 </div>
@@ -558,22 +558,23 @@ layout: default
 <!-- 19 -->
 <div id="step19" class="step">
   <div class="content">
-    {% include partials/gj.html title="Wonderful!" %}
+    {% include partials/gj.html title="Замечательно" %}
 
     <p>
-      By storing our array into a variable, we managed to make our code more <strong>readable</strong>.
+      Храня наш массив в переменной, мы делаем код более <strong>читаемым</strong>.
     </p>
 
     <p>
-      Although this variables contains a list of several things, we might want to deal with only a <strong>single</strong> item of the list.
+      Хотя эти переменный содержат список нескольких элементов, мы возможно хотим работать только с <strong>одним</strong> элементом списка.
+      }
     </p>
 
     <p>
-      To access a <em>specific item</em> of an array, you first need to know its <strong>index</strong> (or position) within the array. You then need to wrap this index into <strong>square brackets</strong>.
+      Для достука к <em>конкретным элементам</em> массива, вам для начала нужно знаеть его <strong>индекс</strong> (или позицию) в массиве. Далее вам нужно обернуть этот индекс в <strong>квадратные скобки</strong>.
     </p>
 
     <p>
-      Can you guess which item is gonna be displayed?
+      Можете догодаться какой элемент будет выведен?
     </p>
 
     {% capture snippet %}{% include snippets/snippet_array_index.md %}{% endcapture %}
@@ -584,37 +585,37 @@ layout: default
 <!-- 20 -->
 <div id="step20" class="step">
   <div class="content">
-    {% include partials/gj.html title="You guessed it!" %}
+    {% include partials/gj.html title="Вы догодались!" %}
 
     <p>
-      It's the <strong>second item</strong> that showed up! In programming, indexes start at zero <code>0</code>.
+      Был выведен <strong>второй элемент</strong>! В программирование индексация начинаеться с нуля <code>0</code>.
     </p>
 
     <div class="stabs is-vertical">
       <div class="stab">
-        <div class="stab-label">you typed the <strong>name</strong> of the array</div>
+        <div class="stab-label">Вы напечатели<strong>имя</strong> массива</div>
         <div class="stab-code"><code class="stabilo"><span class="is-blue">my_things</span>[1]</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you opened a <strong>square bracket</strong></div>
+        <div class="stab-label">вы открыли <strong>квадратную скобку</strong></div>
         <div class="stab-code"><code class="stabilo">my_things<span class="is-black">[</span>1]</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed the <strong>index</strong> of the item you wanted to access</div>
+        <div class="stab-label">вы напечатали <strong>индекс</strong> элемента, к котрому хотите обратиться</div>
         <div class="stab-code"><code class="stabilo">my_things[<span class="is-red">1</span>]</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you <strong>closed</strong> the square bracket</div>
+        <div class="stab-label">вы <strong>закрыли</strong> квадратную скобку</div>
         <div class="stab-code"><code class="stabilo">my_things[1<span class="is-black">]</span></code></div>
       </div>
     </div>
 
     <p>
-      It turns out that variables are <strong>objects</strong> too! Which means that variables also have <strong>properties</strong> and <strong>methods</strong>.
+      Оказываеться, что переменые тоже являються <strong>объектами</strong>! Это означает, что переменные так же имеют <strong>свойства</strong> и <strong>методы</strong>.
     </p>
 
     <p>
-      For example, <code>my_things</code> has a property called <code>length</code>:
+      К примеру, <code>my_things</code> имеет свойство <code>length</code>:
     </p>
 
     {% capture snippet %}{% include snippets/snippet_array_length.md %}{% endcapture %}
@@ -625,14 +626,14 @@ layout: default
 <!-- 21 -->
 <div id="step21" class="step">
   <div class="content">
-    {% include partials/gj.html title="That's right!" %}
+    {% include partials/gj.html title="Верно!" %}
 
     <p>
-      The array has <strong>3</strong> items. You'll see that if you add or remove items in <code>my_things</code>, this <code>length</code> value will change accordingly.
+      Массив имеет <strong>3</strong> элемента. Вы так же увидете что значение <strong>length</strong> поменяеться если вы добавите или удалите элемент в  массиве <code>my_things</code>.
     </p>
 
     <p>
-      While readability and properties are useful, the main point of a variable is that it's <strong>editable</strong>: you can change the value afterwards!
+      Пока читаемость и свойсва полезны, главное в переменных это их <strong>редактируемость</strong>: вы всегда можете поменять значение переменной.
     </p>
 
     {% capture snippet %}{% include snippets/snippet_array_edit.md %}{% endcapture %}
@@ -643,22 +644,22 @@ layout: default
 <!-- 22 -->
 <div id="step22" class="step">
   <div class="content">
-    {% include partials/gj.html title="Yep!" %}
+    {% include partials/gj.html title="Ага!" %}
 
     <p>
-      Two alert boxes have been displayed, but with different values! That's because between the first call and the second one, the value of <code>my_things</code> has been <strong>updated</strong>: a fourth item, the string <code>'LOVE'</code>, was added.
+      Были показаны два окна, но с разными значениями! Это потому что между первым и вторым вызовом функции <strong>alert</strong> значение переменной <code>my_things</code> было <strong>измененно</strong>: был добавлен четвертый элемент, строка <code>'LOVE'</code>.
     </p>
 
     <p>
-      Note that the second time we're assigning a value to <code>my_things</code>, we're <strong>not</strong> using the <code>var</code> keyword: it's because we're editing the <code>my_things</code> variable defined two lines above.
+      Заметьте, что второй раз когда мы указывали значение переменной <code>my_things</code>, мы <strong>не</strong> использовали ключевое слово<code>var</code>: это потому что переменная <code>my_things</code> была уже определена двумя строками выше.
     </p>
 
     <p>
-      <strong>You only use the keyword <code>var</code> when you're <em>creating</em> a new variable</strong>, not when you're <em>editing</em> one.
+      <strong>Вы используете ключевое слова <code>var</code> только когда вы <em>создаете</em> новую переменную</strong>, но не когда вы ее <em>изменяете</em>
     </p>
 
     <p>
-      Do you remember I told you variables had <strong>methods</strong> too (since they're objects)? Another way to edit an array's value is by using the <code>push()</code> method:
+      Помните я говорил что переменные так же имеют <strong>методы</strong> (так как и объекты)? Другой способ изменить значение массива это использовать метод <code>push()</code>:
     </p>
 
     {% capture snippet %}{% include snippets/snippet_array_push.md %}{% endcapture %}
@@ -669,14 +670,15 @@ layout: default
 <!-- 23 -->
 <div id="step23" class="step">
   <div class="content">
-    {% include partials/gj.html title="Fantastic!" %}
+    {% include partials/gj.html title="Фантастика!" %}
 
     <p>
+      Массив <code>my_things</code> содержит <strong>4</strong> элемента.
       The <code>my_things</code> array ends up with <strong>4</strong> items.
     </p>
 
     <p>
-      While the <code>push()</code> method altered the array, others simply <strong>return</strong> a value:
+      Пока метод <code>push()</code> изменяет массив, другие просто <strong>возвращают</strong> значение:
     </p>
 
     {% capture snippet %}{% include snippets/snippet_array_includes.md %}{% endcapture %}
@@ -687,18 +689,18 @@ layout: default
 <!-- 24 -->
 <div id="step24" class="step">
   <div class="content">
-    {% include partials/gj.html title="No ninja here!" %}
+    {% include partials/gj.html title="Здесь нет 'ninja'!" %}
 
     <p>
-      The <code>includes()</code> method checked if the string <code>'ninja'</code> was present in the array. Since it wasn't, the method returned <code>false</code>, a <strong>boolean</strong> value.
+      Метод <code>includes()</code> проверяет есть ли строка <code>'ninja'</code> сейчас в массиве. Так как строки там нет, метод возвращает <strong>булевое</strong> значение <code>false</code>.
     </p>
 
     <p>
-      As a matter of fact, when dealing with booleans, typing the keywords <code>true</code> or <code>false</code> is quite rare. Usually, booleans exist as a result of a function call (like <code>includes()</code>) or a <strong>comparison</strong>.
+      Собственно говоря, вы будете довольно редко работать с булевыми значениями, а имеено с ключевыми словами <code>true</code> или <code>false</code>.Обычно, булевые значения существуют как результат вызова функций (к примеру <code>includes()</code>) или для сравнения
     </p>
 
     <p>
-      Here's a "<em>greater than</em>" comparison:
+      Это "<em>больше чем</em>" сравнение:
     </p>
 
     {% capture snippet %}{% include snippets/snippet_innerwidth_boolean.md %}{% endcapture %}
@@ -709,37 +711,38 @@ layout: default
 <!-- 25 -->
 <div id="step25" class="step">
   <div class="content">
-    {% include partials/gj.html title="Great again!" %}
+    {% include partials/gj.html title="Отлично!" %}
 
     <p>
-      This means your browser window is <strong id="wider">not</strong> wider than <strong>400 pixels</strong>.
+      Это означает окно вашего браузера <strong id="wider">не</strong> шире <strong>400 пиксилей</strong>.
     </p>
 
     <div class="stabs">
       <div class="stab">
-        <div class="stab-label">you typed the <strong>first item</strong> to compare, a <strong>number</strong></div>
+        <div class="stab-label">вы напечатали <strong>первый элемента</strong> для сравнения, это <strong>число</strong></div>
         <div class="stab-code"><code class="stabilo"><span class="is-blue">window<span class="is-black">.</span>innerWidth</span> > 400</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed the "greater than" <strong>operator</strong></div>
+        <div class="stab-label">вы напечатали <strong>оператор</strong> "больше"</div>
         <div class="stab-code"><code class="stabilo">window.innerWidth <span class="is-purple">></span> 400</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed the <strong>second item</strong>, also a <strong>number</strong></div>
+        <div class="stab-label">вы напечатали <strong>второй элемент</strong>, также <strong>число</strong></div>
         <div class="stab-code"><code class="stabilo">window.innerWidth > <span class="is-red">400</span></code></div>
       </div>
     </div>
 
     <p>
-      Just like the <code>+</code> and <code>*</code> before, <code>&gt;</code> is a JavaScript <strong>operator</strong>.
+      Точно так же как <code>+</code> и <code>*</code>, <code>&gt;</code> являеться JavaScript <strong>оператором</strong>.
     </p>
 
     <p>
-      When you make such a comparison with the "<em>greater than</em>" operator <code>&gt;</code>, you obtain a <strong>boolean</strong> value.
+      Когда вы делаете такие сравнения с оператором "<em>больше</em>" <code>&gt;</code>, вы получаете <strong>булевое</strong> значение.
     </p>
 
     <p>
-      Since the result of a <strong>comparison</strong> only has <strong>2</strong> outcomes (<code>true</code> or <code>false</code>), it's useful in cases where your code has to <a onclick="showStep(26);">make a decision</a>…
+      Так как результатом <strong>сравнения</strong> может быть только <strong>2</strong> варианта (<code>true</code> или <code>false</code>)
+      Since the result of a <strong>comparison</strong> only has <strong>2</strong> outcomes (<code>true</code> or <code>false</code>), это полезно в тех случаях, если ваш код должен <a onclick="showStep(26);">принять решение</a>…
     </p>
   </div>
 </div>
@@ -747,25 +750,26 @@ layout: default
 <!-- 26 -->
 <div id="step26" class="step">
   <div class="content">
-    <h2>Conditional statements <span class="stamp is-concept">concept</span></h2>
+    <h2>Условные операторы <span class="stamp is-concept">концепция</span></h2>
 
     <p>
-      Conditional statements are one of the most important concepts in programming. They allow your code to perform certain commands <em>only if</em> certain conditions are met. These conditions can for example be based on:
+      Условные операторы являются одним из наиболее важных понятий в программировании. Они позволяют вашему коду выполнять определенные команды <em>только в случае</em> выполнения определенных условий. Эти условия могут, например, основываться на:
     </p>
 
     <ul>
       <li>
-        a user's input (is the password entered correct?)
+        вход пользователя (введен ли пароль правильно?)
       </li>
       <li>
-        the current state (is it day or night?)
+        текущее состояние (это день или ночь?)
       </li>
       <li>
-        the value of a certain element (is this person older than 18?)
+        значение определенного элемента (этот человек старше 18 лет)
       </li>
     </ul>
 
     <p>
+      Пока что, давайте запускаем окно alert, только если вы на в моем сайте!
       For now, let's trigger an alert box only if you happen to be on my domain!
     </p>
 
@@ -774,7 +778,8 @@ layout: default
 
     <div class="message is-info">
       <div class="message-body">
-        <p>If you want to <strong>type</strong> this code instead of simply copy-pasting it, press <kbd class="key">Shift</kbd><kbd class="plus">+</kbd><kbd class="key">Enter</kbd> to add line breaks in the console!</p>
+
+        <p>Если вы хотите <strong>напечатать</strong> этот код вместо простого копирования его, нажмите <kbd class="key">Shift</kbd><kbd class="plus">+</kbd><kbd class="key">Enter</kbd> для переноса строки</p>
       </div>
     </div>
   </div>
@@ -783,64 +788,64 @@ layout: default
 <!-- 27 -->
 <div id="step27" class="step">
   <div class="content">
-    {% include partials/gj.html title="Equal indeed!" %}
+    {% include partials/gj.html title="Да они равны!" %}
 
     <p>
-      We're doing another comparison here, but with the "<em>equal to</em>" operator <code>==</code> instead.
+      Здесь мы делаеь еще одно сравнение, но с оператором "<em>сравнения</em>" <code>==</code>.
     </p>
 
     <div class="stabs is-vertical">
       <div class="stab">
-        <div class="stab-label">you typed the <strong>keyword</strong> <code>if</code></div>
-        <div class="stab-code"><code class="stabilo"><span class="is-purple">if</span> (window.location.hostname == 'jgthms.com') {</code></div>
+        <div class="stab-label">вы напечатали <strong>ключевое слово</strong> <code>if</code></div>
+        <div class="stab-code"><code class="stabilo"><span class="is-purple">if</span> (window.location.hostname == 'xfranklin.tk') {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you opened a <strong>parenthesis</strong></div>
-        <div class="stab-code"><code class="stabilo">if <span class="is-black">(</span>window.location.hostname == 'jgthms.com') {</code></div>
+        <div class="stab-label">вы открывали <strong>круглую скобку</strong></div>
+        <div class="stab-code"><code class="stabilo">if <span class="is-black">(</span>window.location.hostname == 'xfranklin.tk') {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed a <strong>comparison</strong></div>
-        <div class="stab-code"><code class="stabilo">if (<span class="is-blue">window</span><span class="is-black">.</span><span class="is-blue">location</span><span class="is-black">.</span><span class="is-blue">hostname</span><span class="is-purple"> == </span><span class="is-green">'jgthms.com'</span>) {</code></div>
+        <div class="stab-label">вы напечатали оператор <strong>сравнения</strong></div>
+        <div class="stab-code"><code class="stabilo">if (<span class="is-blue">window</span><span class="is-black">.</span><span class="is-blue">location</span><span class="is-black">.</span><span class="is-blue">hostname</span><span class="is-purple"> == </span><span class="is-green">'xfranklin.tk'</span>) {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you <strong>closed</strong> the parenthesis</div>
-        <div class="stab-code"><code class="stabilo">if (window.location.hostname == 'jgthms.com'<span class="is-black">)</span> {</code></div>
+        <div class="stab-label">вы <strong>закрыли</strong> круглую скобку</div>
+        <div class="stab-code"><code class="stabilo">if (window.location.hostname == 'xfranklin.tk'<span class="is-black">)</span> {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you opened a <strong>curly bracket</strong></div>
-        <div class="stab-code"><code class="stabilo">if (window.location.hostname == 'jgthms.com') <span class="is-black">{</span></code></div>
+        <div class="stab-label">вы открыли <strong>фигурную скобку</strong></div>
+        <div class="stab-code"><code class="stabilo">if (window.location.hostname == 'xfranklin.tk') <span class="is-black">{</span></code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you entered a <strong>block of code</strong> that's only executed if the previous condition is <strong>true</strong></div>
+        <div class="stab-label">вы ввели <strong>блок кода</strong> он выполниться только в том случае, если предыдущее условие <strong>true</strong></div>
         <div class="stab-code"><code class="stabilo"><span class="is-blue">&nbsp;&nbsp;alert</span><span class="is-black">(</span><span class="is-green">'Welcome on my domain! 🤗'</span><span class="is-black">)</span></code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you <strong>closed</strong> the curly bracket</div>
+        <div class="stab-label">вы <strong>закрыли</strong> фигурную скобку</div>
         <div class="stab-code"><code class="stabilo"><span class="is-black">}</span></code></div>
       </div>
     </div>
 
     <p>
-      Since the alert box <em>did</em> appear, it means that the <strong>hostname</strong> is indeed <em>equal to</em> <code>'jgthms.com'</code>!
+      Поскольку окно предупреждения появилось, это означает, что имя <strong>хоста</strong> действительно <em>равно</em> <code>'xfranlin.tk'</code>!
     </p>
 
     <p>
-      We've handled the case when the comparison returns <code>true</code>.
+      Мы обработали случай, когда сравнение возвращает <code>true</code>.
     </p>
 
     <p>
-      To handle the <strong>opposite case</strong>, when the hostname isn't <code>'jgthms.com'</code>, we can use the "<em>not equal to</em>" <strong>operator</strong> <code>!=</code>:
+      Для обработки <strong> противоположного случая </strong>, когда имя хоста не равно <code>'xfranklin.tk' </code>, мы можем использовать <strong>оператор</strong> "<em>не равно</em>" <code>!=</code>:
     </p>
 
     {% capture snippet %}{% include snippets/snippet_if_not.md %}{% endcapture %}
     {% include partials/snippet.html contents=snippet skipRun=true %}
 
     <p>
-      If you try out this snippet, you'll see that it doesn't trigger anything! (Unless this tutorial has been copied to another domain 😆).
+      Если вы попробуете этот фрагмент кода, вы увидите, что он ничего не запустит! (Если этот учебник не был скопирован в другой домен 😆).
     </p>
 
     <p>
-      What if we wanted to handle both cases <strong>simultaneously</strong>? We could write two <code>if</code> statements in a row. But since one statement is the <em>exact opposite</em> of the other, we can <strong>combine</strong> them with a <code>else</code> statment:
+      Что делать, если мы хотели обрабатывать оба случая <strong>одновременно</strong>? Мы могли бы написать два оператора <code>if</code> в строке. Но поскольку одно утверждение является <em>полной противоположностью</em> другого, мы можем <strong>объединить</strong> их с помощью конструкции <code>else</code>:
     </p>
 
     {% capture snippet %}{% include snippets/snippet_if_else.md %}{% endcapture %}
@@ -851,21 +856,21 @@ layout: default
 <!-- 28 -->
 <div id="step28" class="step">
   <div class="content">
-    {% include partials/gj.html title="Still equal!" %}
+    {% include partials/gj.html title="Все еще равны!" %}
 
-    <p>With this conditional setup, we can be sure that:</p>
+    <p>C таким условным выражение, мы можем быть точно уверены что:</p>
 
     <ul>
-      <li><strong>only one</strong> of the two alerts will be triggered, but never both</li>
-      <li>at least one of the two alerts <em>will</em> be triggered, because we're covering <strong>all</strong> cases</li>
+      <li><strong>только одно</strong> из двух предупреждений будет сработано, но никогда оба</li>
+      <li>хотя бы одно из двух предупреждений <em>будет</em> вызвано, потому что мы охватили <strong>все</strong> случаи</li>
     </ul>
 
     <p>
-      While <code>else</code> is useful for covering all <em>remaining</em> cases, sometimes you want to handle more than two cases.
+      Хотя <code>else</code> полезно для охвата всех <em>оставшихся</em> случаев, иногда вы хотите обрабатывать более двух случаев.
     </p>
 
     <p>
-      By using <code>else if</code> you can add <strong>intermediate</strong> statements and handle multiple cases:
+      Спомощью <code>else if</code> вы можете обрабатовать несколько случаев:
     </p>
 
     {% capture snippet %}{% include snippets/snippet_else_if.md %}{% endcapture %}
@@ -876,18 +881,18 @@ layout: default
 <!-- 29 -->
 <div id="step29" class="step">
   <div class="content">
-    {% include partials/gj.html title="You got it!" %}
+    {% include partials/gj.html title="Хорошо!" %}
 
     <p>
-      As soon as one comparison returns <code>true</code>, it will be triggered, and all following statements will be ignored. That's why only one alert box showed up!
+      Как только одно из условных выражений вернет <code>true</code>, оно будет запущено, и все последующие сравнения будут проигнорированы. Вот почему появилось только одно окно предупреждения!
     </p>
 
     <p>
-      Conditional statements make use of the <strong>keywords</strong> <code>if</code> and <code>else</code>, followed by a set of <strong>parentheses</strong>.
+      Условные выражения используют <strong>ключевые слова</strong> <code>if</code> и <code>else</code>, а затем идут <strong>круглые скобки</strong>.
     </p>
 
     <p>
-      This pattern of keyword/parentheses combination also happens to exist for another <a onclick="showStep(30);">essential programming concept…</a>
+      Такая комбинация ключевых слов/круглых скобок существует для другой <a onclick="showStep(30);">важной концепции программирования…</a>
     </p>
   </div>
 </div>
@@ -895,7 +900,7 @@ layout: default
 <!-- 30 -->
 <div id="step30" class="step">
   <div class="content">
-    <h2>Loops <span class="stamp is-concept">concept</span></h2>
+    <h2>Циклы <span class="stamp is-concept">концепция</span></h2>
 
     <p>
       When you want to execute a block of code a <em>certain amount</em> of times, you can use a JavaScript <strong>loop</strong>.
