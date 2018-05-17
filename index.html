@@ -903,11 +903,11 @@ layout: default
     <h2>Циклы <span class="stamp is-concept">концепция</span></h2>
 
     <p>
-      When you want to execute a block of code a <em>certain amount</em> of times, you can use a JavaScript <strong>loop</strong>.
+      Если вы хотите выполнить блок кода <em>определенное количество</em> раз, вы можете использовать <strong>цикл</strong> JavaScript.
     </p>
 
     <p>
-      Can you guess how many alert boxes this snippet will trigger?
+      Можете ли вы догадаться, сколько окон alert запускает этот фрагмент?
     </p>
 
     {% capture snippet %}{% include snippets/snippet_loop.md %}{% endcapture %}
@@ -918,129 +918,129 @@ layout: default
 <!-- 31 -->
 <div id="step31" class="step">
   <div class="content">
-    {% include partials/gj.html title="Three it is!" %}
+    {% include partials/gj.html title="Их три!" %}
     <p>
-      There were exactly <strong>3</strong> alert boxes! Let's dissect what happened:
+      Было ровно <strong>3</strong> оповещения! Давайте проанализируем, что произошло:
     </p>
 
     <ul>
       <li>
-        <code>var i = 0</code> is the <strong>initial state</strong><br>
-        Before the loop even starts, the variable <code>i</code> is assigned a value of zero <code>0</code>.
+        <code>var i = 0</code> это <strong>начальное состояние</strong><br>
+        Прежде чем цикл будет запущен, переменной <code>i</code> присваивается значение <code>0</code>.
       </li>
       <li>
-        <code>i < 3</code> is the <strong>conditional statement</strong><br>
-        On every iteration of the loop, we check this comparison.<br>
-        If it's <code>true</code>, we execute the code in the block.<br>
-        If it's <code>false</code>, we exit the loop.<br>
+        <code>i < 3</code> это <strong>yсловие</strong><br>
+        На каждой итерации цикла мы проверяем это условие.<br>
+        Если условие <code>true</code>, мы выполняем блок кода.<br>
+        Если условие <code>false</code>, мы выходим из цикла.<br>
       </li>
       <li>
-        <code>i++</code> is the <strong>increment expression</strong><br>
-        <em>If</em> the block of code is executed, this expression is executed.<br>
-        In this case, the value of <code>i</code> is incremented by 1.
+        <code>i++</code> это <strong>шаг</strong><br>
+        <em>Если</em> блок кода сработал, этот шаг выполняеться.<br>
+        В этом случае, значение <code>i</code> увеличиться на 1.
       </li>
     </ul>
 
     <p>
-      Here's how you implemented it:
+      Вот как вы это реализовали:
     </p>
 
     <div class="stabs is-vertical">
       <div class="stab">
-        <div class="stab-label">you typed the <strong>keyword</strong> <code>for</code></div>
+        <div class="stab-label">вы напечатали <strong>ключевое слово</strong> <code>for</code></div>
         <div class="stab-code"><code class="stabilo"><span class="is-purple">for</span> (var i = 0; i < 3; i++) {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you opened a <strong>parenthesis</strong></div>
+        <div class="stab-label">вы открыли <strong>круглую скобку</strong></div>
         <div class="stab-code"><code class="stabilo">for <span class="is-black">(</span>var i = 0; i < 3; i++) {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you entered the <strong>initial state</strong></div>
+        <div class="stab-label">вы ввели <strong>инициализацию</strong></div>
         <div class="stab-code"><code class="stabilo">for (<span class="is-purple">var </span><span class="is-blue">i</span><span class="is-purple"> = </span><span class="is-red">0</span>; i < 3; i++) {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed a <strong>semicolon</strong> to separate the expressions</div>
+        <div class="stab-label">вы напечатали <strong>точку с запятой</strong> для разделения выражений</div>
         <div class="stab-code"><code class="stabilo">for (var i = 0<span class="is-black">;</span> i < 3; i++) {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you entered the <strong>comparison</strong> check</div>
+        <div class="stab-label">вы напечатали проверку <strong>условия</strong></div>
         <div class="stab-code"><code class="stabilo">for (var i = 0; <span class="is-blue">i</span><span class="is-purple"> < </span><span class="is-red">3</span>; i++) {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed a <strong>semicolon</strong> to separate the expressions</div>
+        <div class="stab-label">вы напечатали <strong>точку с запятой</strong> для разделения выражений</div>
         <div class="stab-code"><code class="stabilo">for (var i = 0; i < 3<span class="is-black">;</span> i++) {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you entered the <strong>increment</strong> expression</div>
+        <div class="stab-label">вы ввели выражение <strong>инкрементации</strong></div>
         <div class="stab-code"><code class="stabilo">for (var i = 0; i < 3; <span class="is-blue">i</span><span class="is-purple">++</span>) {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you <strong>closed</strong> the parenthesis</div>
+        <div class="stab-label">вы <strong>закрыли</strong> круглую скобку</div>
         <div class="stab-code"><code class="stabilo">for (var i = 0; i < 3; i++<span class="is-black">)</span> {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you opened a <strong>curly bracket</strong></div>
+        <div class="stab-label">вы открыли <strong>фигурную скобку</strong></div>
         <div class="stab-code"><code class="stabilo">for (var i = 0; i < 3; i++) <span class="is-black">{</span></code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you entered a <strong>block of code</strong> that's only executed if the comparison check is <strong>true</strong></div>
+        <div class="stab-label">вы ввели <strong>блок кода</strong>, он выполниться в том случае, если проверка условия <strong>true</strong></div>
         <div class="stab-code"><code class="stabilo"><span class="is-blue">&nbsp;&nbsp;alert</span><span class="is-black">(</span><span class="is-blue">i</span><span class="is-black">);</span></code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you <strong>closed</strong> the curly bracket</div>
+        <div class="stab-label">вы <strong>закрыли</strong> фигурную скобку</div>
         <div class="stab-code"><code class="stabilo"><span class="is-black">}</span></code></div>
       </div>
     </div>
 
     <p>
-      Let's analyze each iteration of the loop:
+      Проанализируем каждую итерацию цикла:
     </p>
 
     <div class="table-container">
       <table>
         <thead>
           <tr>
-            <th>Iteration</th>
-            <th>Value of <code>i</code></th>
-            <th>Test</th>
-            <th>Trigger the alert?</th>
+            <th>Итерация</th>
+            <th>Значение <code>i</code></th>
+            <th>Тест</th>
+            <th>Запуститься ли alert?</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1st</td>
+            <td>1</td>
             <td>0</td>
             <td><code>0&nbsp;<&nbsp;3</code></td>
-            <td>Yes</td>
+            <td>Да</td>
           </tr>
           <tr>
-            <td>2nd</td>
+            <td>2</td>
             <td>1</td>
             <td><code>1&nbsp;<&nbsp;3</code></td>
-            <td>Yes</td>
+            <td>Да</td>
           </tr>
           <tr>
-            <td>3rd</td>
+            <td>3</td>
             <td>2</td>
             <td><code>2&nbsp;<&nbsp;3</code></td>
-            <td>Yes</td>
+            <td>Да</td>
           </tr>
           <tr>
-            <td>4th</td>
+            <td>4</td>
             <td>3</td>
             <td><code>3&nbsp;<&nbsp;3</code></td>
-            <td><strong>No!</strong></td>
+            <td><strong>Нет!</strong></td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <p>
-      This loop allowed us to <strong>repeat</strong> an action N times. That's what computers are all about!
+      Этот цикл позволил нам <strong>повторить</strong> действие N раз. Вот что делают компьютеры!
     </p>
 
     <p>
-      Of all the types of variables we've covered so far, there is one in particular <a onclick="showStep(32);">worth looping through…</a>
+      Из всех типов переменных, которые мы рассмотрели до этого, есть один <a onclick="showStep(32);">заслуживающий внимания…</a>
     </p>
   </div>
 </div>
@@ -1048,34 +1048,34 @@ layout: default
 <!-- 32 -->
 <div id="step32" class="step">
   <div class="content">
-    <h2>Looping through arrays <span class="stamp is-tool">tool</span></h2>
+    <h2>Перебор массива <span class="stamp is-tool">инструмент</span></h2>
 
     <p>
-      Arrays are a perfect candidate for loops, because in programming we often want to repeat the <strong>same action</strong> for <em>each</em> item of an array.
+      Массивы идеальные кандидаты для циклов, потому что в программирование мы всегда хотим повторять <strong>одинаковое действие</strong> для <em>каждого</em> элемента массива.
     </p>
 
     <p>
-      Let's say we wanted to trigger an alert box for <em>each</em> item of an array. While we could write as many <code>alert()</code> statements as there are items in the array (😰), this solution is cumbersome and ineffective! It would be prone to errors, and wouldn't scale at all with bigger arrays.
+      Скажем мы хотим вызвать alert для <em>каждого</em> элемента массива. Мы можем вызвать столько <code>alert()</code> сколько и элементов в массиве (😰), такое решение окажеться громоздким и неэффективным! Оно может быть подвержено ошибкам, и не будет маштабироваться на более большие массивы.
     </p>
 
     <p>
-      Since programming languages are here to help us simplify our work, let's figure out a better way. We already know a few things:
+      Поскольку, языки программирование здесь, что бы помогать нам упрощать нашу работу, давайте найдем лучший вариант. Мы уже знаем несколько вещей:
     </p>
 
     <ul>
       <li>
-        We know how to get an array's <strong>length</strong>
+        Мы знаем как получить <strong>длину</strong> массива
       </li>
       <li>
-        We know how to access an array's item by using the <strong>index</strong>
+        Мы знаем как получить доступ к элементам массива используя <strong>индекс</strong>
       </li>
       <li>
-        We have access to the variable <code>i</code>, which conveniently increments 1 by 1
+        Мы имеем доступ к переменной <code>i</code>, которую удобно увеличивать на 1
       </li>
     </ul>
 
     <p>
-      By combining these informations, we can devise the following snippet:
+      Комбинируя эту информацию, мы можем разработать следующий фрагмент:
     </p>
 
     {% capture snippet %}{% include snippets/snippet_loop_array.md %}{% endcapture %}
@@ -1086,18 +1086,18 @@ layout: default
 <!-- 33 -->
 <div id="step33" class="step">
   <div class="content">
-    {% include partials/gj.html title="In a row!" %}
+    {% include partials/gj.html title="В один ряд!" %}
 
     <p>
-      One by one, the items of the array were displayed in their own alert box.
+      Один за одним, элементы массива были показаны в своих собственных окнах alert.
     </p>
 
     <p>
-      While using a loop simplifies the process of going through each item of an array, we still had to create a <code>for</code> block <strong>manually</strong> and create a new variable <code>i</code> whose only purpose was to increment after each loop.
+      При использовании цикла упрощаеться процесс перебора всего массива, хотя мы все еще <strong>вручную</strong> создаем блок <code>for</code> и создаем новую переменную <code>i</code> цель которого только состоит в увеличение после каждого прохода цикла.
     </p>
 
     <p>
-      I know what you're thinking. "<em><a onclick="showStep(34);">There must be a better way</a>!</em>"
+      Я знаю вы думаете. "<em><a>Должно быть лучшее решение</a>!</em>"
     </p>
   </div>
 </div>
@@ -1105,10 +1105,10 @@ layout: default
 <!-- 34 -->
 <div id="step34" class="step">
   <div class="content">
-    <h2>forEach loop <span class="stamp is-tool">tool</span></h2>
+    <h2>цикл forEach <span class="stamp is-tool">инструмент</span></h2>
 
     <p>
-      Arrays actually have a <strong>method</strong> called <code>forEach()</code>, which allows to perform a task <em>for each</em> item in the array:
+      На самом деле массивы имеют <strong>метод</strong> <code>forEach()</code>, который позволяет выполнить задачу <em>для каждого</em> элемента массива:
     </p>
 
     {% capture snippet %}{% include snippets/snippet_loop_foreach.md %}{% endcapture %}
@@ -1119,53 +1119,53 @@ layout: default
 <!-- 35 -->
 <div id="step35" class="step">
   <div class="content">
-    {% include partials/gj.html title="Better!" %}
+    {% include partials/gj.html title="Лучше!" %}
 
     <p>
-      Note a few improvements:
+      Обратите внимание на несколько улучшений:
     </p>
 
     <ul>
       <li>
-        There is no <code>i</code> variable involved
+        Здесь нет переменной <code>i</code>
       </li>
       <li>
-        We don't need to access the array's <code>length</code>
+        Нам не нужно обращаться к свойству <code>length</code>
       </li>
       <li>
-        We don't need to use the <strong>index</strong> with <code>my_thing[i]</code> to access the item
+        Нам не нужно использовать <strong>индекс</strong> вместе с <code>my_thing[i]</code> для доступа к элементу
       </li>
     </ul>
 
     <p>
-      Remember the syntax of the <code>alert()</code> function? It was <code>alert(parameter)</code>.
+      Помните синтаксис функции <code>alert()</code>? Он был таким <code>alert(parameter)</code>.
     </p>
 
     <p>
-      If you look carefully, you can see that <code>forEach()</code> has the exact same syntax! It's <code>forEach(parameter)</code> but where the parameter happens to be a <strong>function</strong> that spans 3 lines.
+      Если вы внимательно посмотрите, вы увидете, что <code>forEach()</code> имеет тот же синтаксис! Это <code>forEach(parameter)</code>, но где параметр являеться <strong>функцией</strong> которая охватывает 3 строки.
     </p>
 
     <p>
-      So far, we've used a few functions and methods:
+      До сих пор мы использовали несколько функций и методов:
     </p>
 
     <ul>
       <li>
-        the <code>alert()</code> function (or window method)
+        функцию  <code>alert()</code>
       </li>
       <li>
-        the <code>push()</code> array method
+        метод массива <code>push()</code>
       </li>
       <li>
-        the <code>includes()</code> array method
+        метод массива <code>includes()</code>
       </li>
       <li>
-        the <code>forEach()</code> array method
+        метод массива <code>forEach()</code>
       </li>
     </ul>
 
     <p>
-      We know how to <strong>call</strong> a function, but how do you actually <a onclick="showStep(36);">create one</a>?
+      Мы знаем, как <strong>вызвать</strong> функцию, но как ее <a onclick="showStep(36);">создать</a>?
     </p>
   </div>
 </div>
@@ -1173,22 +1173,22 @@ layout: default
 <!-- 36 -->
 <div id="step36" class="step">
   <div class="content">
-    <h2>Creating a custom function <span class="stamp is-info">info</span></h2>
+    <h2>Создание собственной функции <span class="stamp is-info">информация</span></h2>
 
     <p>
-      The power of programming languages is the ability to create your <strong>own functions</strong>, that fit <em>your</em> needs.
+      Мощь языков программирования заключаеться в возможности создавать свои <strong>собственные функции</strong>, соответствующие <em>вашим</em> потребностям.
     </p>
 
     <p>
-      Remember the keyword/parentheses combination that we used for <code>if/else</code> and <code>for</code>? Well, guess what: it's <em>almost</em> the same pattern here!
+      Помните кобинацию ключевых слов/круглых скобок которую мы использовали для <code>if/else</code> и <code>for</code>? Ну, угадайте: здесь <em>почти</em> все тоже самое!
     </p>
 
     <p>
-      I'm saying "almost" because the only difference is that a function needs a <strong>name</strong>!
+      Я говорю "почти", потому что единственная разница в том что функции нужно <strong>имя</strong>!
     </p>
 
     <p>
-      Let's <strong>create</strong> a function called <code>greet()</code>, with <strong>1</strong> parameter called <code>name</code>, and then immediately <strong>call</strong> it:
+      Давайте <strong>создадим</strong> функцию с именем <code>greet()</code>, с <strong>одним</strong> параметром с именем <code>name</code>, а затем сразу же <strong>вызовите</strong> ее:
     </p>
 
     {% capture snippet %}{% include snippets/snippet_greet.md %}{% endcapture %}
@@ -1199,103 +1199,103 @@ layout: default
 <!-- 37 -->
 <div id="step37" class="step">
   <div class="content">
-    {% include partials/gj.html title="Greetings!" %}
+    {% include partials/gj.html title="Приветствую!" %}
 
     <p>
-      You've created your first function! It's a simple one but it can teach you a lot.
+      Вы создали свою первую функцию! Это просто, но это может вас многому научить.
     </p>
 
     <p>
-      Note a few things:
+      Обратите внимание на несколько вещей:
     </p>
 
     <ul>
       <li>
-        the <strong>name</strong> of the function is <code>greet</code>
+        <strong>имя</strong> функции <code>greet</code>
       </li>
       <li>
-        the <strong>parameter</strong> is called <code>name</code>: it's like a variable, since it acts as a container for a value
+        <strong>параметр</strong> называеться <code>name</code>: это как переменная, поскольку она действует как контейнер для значения
       </li>
       <li>
-        we're creating a <strong>variable</strong> called <code>message</code> (a string) whose value is <code>'Hey there ' + name</code>
+        мы создали <strong>переменную</strong> <code>message</code> (строка) значение которой <code>'Hey there ' + name</code>
       </li>
       <li>
-        what this <strong>plus</strong> sign <code>+</code> does is <strong>concatenate</strong> (or combine) the two strings to make a single longer one
+        что здесь делает знак <strong>плюс</strong> <code>+</code> он <strong>объединяет</strong> две строки, что бы сделать одну длинную
       </li>
       <li>
-        we're <strong>calling</strong> the <code>alert()</code> function, and use the <code>message</code> variable as parameter
+        мы <strong>вызываем</strong> функцию <code>alert()</code>, и используем переменную <code>message</code> как параметр
       </li>
       <li>
-        after having created the function, we're calling it with the parameter <code>'Alex'</code>
+        после создания функции мы вызываем ее с параметром <code>'Alex'</code>
       </li>
     </ul>
 
     <p>
-      If we break it down step by step:
+      Давайте разберем все шаг за шагом:
     </p>
 
     <div class="stabs is-vertical">
       <div class="stab">
-        <div class="stab-label">you typed the <strong>keyword</strong> <code>function</code></div>
+        <div class="stab-label">вы напечатали <strong>ключевое слово</strong> <code>function</code></div>
         <div class="stab-code"><code class="stabilo"><span class="is-purple">function</span> greet(name) {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed the <strong>name</strong> of the function</div>
+        <div class="stab-label">вы напечатали <strong>имя</strong> функции</div>
         <div class="stab-code"><code class="stabilo">function <span class="is-blue">greet</span>(name) {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you opened a <strong>parenthesis</strong></div>
+        <div class="stab-label">вы открыли <strong>круглые скобки</strong></div>
         <div class="stab-code"><code class="stabilo">function greet<span class="is-black">(</span>name) {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you created a <strong>parameter</strong> called <code>name</code></div>
+        <div class="stab-label">вы создали <strong>параметр</strong> <code>name</code></div>
         <div class="stab-code"><code class="stabilo">function greet(<span class="is-blue">name</span>) {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you <strong>closed</strong> the parenthesis</div>
+        <div class="stab-label">вы <strong>закрыли</strong> круглые скобки</div>
         <div class="stab-code"><code class="stabilo">function greet(name<span class="is-black">)</span> {</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you opened a <strong>curly bracket</strong></div>
+        <div class="stab-label">вы отрыли <strong>фигурные скобки</strong></div>
         <div class="stab-code"><code class="stabilo">function greet(name) <span class="is-black">{</span></code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you entered a <strong>block of code</strong> that's only executed whenever the function is <strong>called</strong></div>
+        <div class="stab-label">вы напечатали <strong>блок кода</strong> который исполниться только когда функцию <strong>вызовут</strong></div>
         <div class="stab-code"><code class="stabilo">&nbsp;&nbsp;<span class="is-purple">var</span><span class="is-blue"> message </span><span class="is-purple">= </span><span class="is-green">'Hey there '</span><span class="is-purple"> +</span><span class="is-blue"> name</span><span class="is-black">;</span></code><br><code class="stabilo">&nbsp;&nbsp;<span class="is-blue">alert</span><span class="is-black">(</span><span class="is-blue">message</span><span class="is-black">);</span></code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you <strong>closed</strong> the curly bracket</div>
+        <div class="stab-label">вы <strong>закрыли</strong> фиругные скобки</div>
         <div class="stab-code"><code class="stabilo"><span class="is-black">}</span></code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you <strong>called</strong> the function with a string as parameter</div>
+        <div class="stab-label">вы <strong>вызвали</strong> функцию со строкой в качестве параметра</div>
         <div class="stab-code"><code class="stabilo"><span class="is-blue">greet</span><span class="is-black">(</span><span class="is-green">'Alex'</span><span class="is-black">)</span><span class="is-black">;</span></code></div>
       </div>
     </div>
 
     <p>
-      Unless we call the <code>greet()</code> function at the end, nothing happens! That's because the <code>alert()</code> call is <em>inside</em> the scope of <code>greet()</code> so it's not triggered unless the parent function <code>greet()</code> itself is called!
+      Если мы не вызовем функцию <code>greet()</code> в конце, ничего не произойдет! Это потому, что вызов <code>alert()</code> находиться <em>внури</em> области видимости <code>greet()</code> поэтому она не запуститься.
     </p>
 
     <p>
-      Basically, by <strong>creating</strong> <code>greet()</code>, you're only telling the browser: "<em>Hey! I've created this new function. So if at some point I call it, please execute whatever is inside!</em>".
+      В основном, <strong>создавая</strong> <code>greet()</code>, вы сообщаете браузеру: "<em>Эй, я создал эту новую функцию. Поэтому, если в какой-то момент я ее вызову, выполните все, что внутри!</em>".
     </p>
 
     <p>
-      That's why, when you <strong>call</strong> <code>greet()</code> at the end, the browser executes its content, which happens to be calling <code>alert()</code>.
+      Вот почему, когда вы в конце <strong>вызываете</strong> <code>greet()</code>, браузер выполняет cодержимое, которое вызывает <code>alert()</code>.
     </p>
 
     <p>
-      It's important to understand that functions are a <strong>2-step</strong> process: creating it first, calling it afterwards.
+    	Важно понимать, что функции это <strong>двухэтапный</strong> процесс: сначала создать ее, потом вызвать.
     </p>
 
     <p>
-      As a matter of fact, the <code>alert()</code> function we've used all along was already created beforehand. It just exists somewhere inside your browser.
+      На самом деле, функция <code>alert()</code>, которую мы использовали все время, уже была создана заранее. Она просто существует где-то в вашем браузере.
     </p>
 
     <p>
-      Anyway, we've already covered <em>a lot</em> in 14 minutes!<br>
-      So, <a onclick="showStep(38);">what's next</a>?
+      Во всяком случае, мы уже <em>многое</em> преодолели за 14 минут!<br>
+      Так <a onclick="showStep(38);">что же дальше</a>?
     </p>
   </div>
 </div>
@@ -1303,38 +1303,38 @@ layout: default
 <!-- 38 -->
 <div id="step38" class="step">
   <div class="content">
-    <h2>Next steps <span class="stamp is-victory">victory!</span></h2>
+    <h2>Следующий шаг <span class="stamp is-victory">победа!</span></h2>
 
-    <h3>Learn JavaScript</h3>
+    <h3>Изучите JavaScript</h3>
 
     <p>
-      We've barely covery the basics here. But don't worry! There are <em>tons</em> of resources available online!
+    	Здесь мы изучили основы. Но не волнуйся! Есть <em>много</em> ресурсов, доступных в Интернете!
     </p>
 
     <p>
-      Here are a few <strong>free</strong> resources I'd recommend:
+    	Вот несколько <strong>бесплатных</strong> ресурсов, которые я бы рекомендовал:
     </p>
 
     <ul>
       <li>
-        <a href="http://eloquentjavascript.net/" rel="nofollow" target="_blank">Eloquent JavaScript</a>
+        <a href="https://karmazzin.gitbooks.io/eloquentjavascript_ru/content/" rel="nofollow" target="_blank">Выразительный Javascript</a>
       </li>
       <li>
         <a href="https://www.freecodecamp.org/" rel="nofollow" target="_blank">freeCodeCamp</a>
       </li>
       <li>
-        <a href="https://javascript.info/" rel="nofollow" target="_blank">The Modern JavaScript Tutorial</a>
+        <a href="https://learn.javascript.ru/" rel="nofollow" target="_blank">Современный учебник Javascript</a>
       </li>
       <li>
-        <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript" rel="nofollow" target="_blank">Mozilla Developer Network</a>
+        <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript" rel="nofollow" target="_blank">Mozilla Developer Network</a>
       </li>
       <li>
-        <a href="https://github.com/getify/You-Dont-Know-JS" rel="nofollow" target="_blank">You Don't Know JS</a>
+        <a href="https://github.com/azat-io/you-dont-know-js-ru" rel="nofollow" target="_blank">Вы не знаете JS</a>
       </li>
     </ul>
 
     <p>
-      If you prefer <strong>video tutorials</strong>, check out these <strong><a href="https://click.linksynergy.com/fs-bin/click?id=76TvM1KGjYg&offerid=358574.81&type=3&subid=0" target="_blank">Udemy courses</a><IMG class="lazyload" border=0 width=1 height=1 data-src="https://ad.linksynergy.com/fs-bin/show?id=76TvM1KGjYg&bids=358574.81&type=3&subid=0" ></strong>:
+      Если вы предпочитаете <strong> видеоуроки</strong>, ознакомьтесь с этими <strong><a href="https://click.linksynergy.com/fs-bin/click?id=76TvM1KGjYg&offerid=358574.81&type=3&subid=0" target="_blank">курсами Udemy</a><IMG class="lazyload" border=0 width=1 height=1 data-src="https://ad.linksynergy.com/fs-bin/show?id=76TvM1KGjYg&bids=358574.81&type=3&subid=0" ></strong>:
     </p>
 
     <nav class="shares">
@@ -1349,8 +1349,8 @@ layout: default
           height="21"
         %}
         <br>
-        <em>21.5 hours 📼</em>
-        <strong>Modern JavaScript From The Beginning</strong>
+        <em>21.5 часов 📼</em>
+        <strong>Современный JavaScript с самого начала</strong>
       </a>
       <IMG class="lazyload" border=0 width=1 height=1 data-src="https://ad.linksynergy.com/fs-bin/show?id=76TvM1KGjYg&bids=358574.1463348&type=2&subid=0" >
 
@@ -1365,14 +1365,14 @@ layout: default
           height="21"
         %}
         <br>
-        <em>17.5 hours 📼</em>
-        <strong>The Complete JavaScript Course: Build a Real-World Project</strong>
+        <em>17.5 часов 📼</em>
+        <strong>Полный курс JavaScript: создание реального проекта</strong>
       </a>
       <IMG class="lazyload" border=0 width=1 height=1 data-src="https://ad.linksynergy.com/fs-bin/show?id=76TvM1KGjYg&bids=358574.851712&type=2&subid=0" >
     </nav>
 
     <p>
-      If you're in a rush, try this <strong>shorter</strong> course!
+    	Если вы в спешке, попробуйте этот более <strong>короткий</strong> курс!
     </p>
 
     <nav class="shares">
@@ -1387,20 +1387,20 @@ layout: default
           height="21"
         %}
         <br>
-        <em>Only 3.5 hours! 📼</em>
-        <strong>Advanced Javascript</strong>
+        <em>Только 3.5 часа! 📼</em>
+        <strong>Продвинутый Javascript</strong>
       </a>
       <IMG class="lazyload" border=0 width=1 height=1 data-src="https://ad.linksynergy.com/fs-bin/show?id=76TvM1KGjYg&bids=358574.670034&type=2&subid=0" >
     </nav>
 
-    <h3>Learn HTML and CSS</h3>
+    <h3>Изучите HTML и CSS</h3>
 
     <p>
-      JavaScript is only one third of what makes a webpage! You also need to know <strong>HTML</strong> and <strong>CSS</strong>.
+      JavaScript составляет лишь одну треть от того, что делает веб-страницу! Вам также нужно знать <strong>HTML</strong> и <strong>CSS</strong>.
     </p>
 
     <p>
-      Luckily, I've created <strong>two free references</strong> for you to browse through, so you can learn everything each language has to offer!
+    	К счастью, я создал <strong>два бесплатных сервиса</strong> для вас, так что вы можете узнать все, что может предложить каждый язык!
     </p>
 
     <nav class="shares">
@@ -1440,10 +1440,10 @@ layout: default
       </a>
     </nav>
 
-    <h3>Learn my CSS framework</h3>
+    <h3>Изучите мой CSS фреймворк</h3>
 
     <p>
-      I designed this page with <strong>Bulma</strong>, my free open source CSS framework based on Flexbox. <a href="https://bulma.io" target="_blank">Check it out!</a>
+      Я создал эту страницу с помощью <strong>Bulma</strong>, мой бесплатный CSS фреймворк работающий на Флексбоксах. <a href="https://bulma.io" target="_blank">Попробуй!</a>
     </p>
 
     {%
@@ -1457,10 +1457,10 @@ layout: default
       height="160"
     %}
 
-    <h3>Read my book</h3>
+    <h3>Прочитай мою книгу</h3>
 
     <p>
-      I wrote a <strong>44-page PDF</strong> called "<a href="https://jgthms.com/css-in-44-minutes-ebook" target="_blank">CSS in 44 minutes</a>" which teaches how to build your own personal webpage from scratch with HTML5 and CSS3.
+    	Я написал <strong>44-страничный PDF-документ</strong> под названием "<a href="https://jgthms.com/css-in-44-minutes-ebook" target="_blank">CSS за 44 минуты»</a>", в котором рассказывается, как создать свою собственную веб-страницу с нуля с помощью HTML5 и CSS3.
     </p>
 
     {%
@@ -1475,11 +1475,11 @@ layout: default
     %}
 
     <p>
-      As a bonus, the book also includes a small <strong>chapter on JavaScript</strong> in which I talk about functions, conditionals, objects, strings, and even explains how to interact with CSS.
+    	В качестве бонуса в книгу также включена небольшая <strong>глава по JavaScript</strong>, в которой я рассказываю о функциях, условиях объектах, строках и даже объясняю, как взаимодействовать с CSS.
     </p>
 
     <p>
-      I guess now there's <a onclick="showStep(39);">only one thing left to do</a>…
+    	Думаю, теперь <a onclick="showStep(39);">осталось только одно</a>…
     </p>
   </div>
 </div>
@@ -1487,7 +1487,7 @@ layout: default
 <!-- 39 -->
 <div id="step39" class="step">
   <div class="content">
-    <h2>Share and support! 😍</h2>
+    <h2>Поделиться и поддержать! 😍</h2>
 
     <nav class="shares">
       <a
@@ -1564,11 +1564,12 @@ layout: default
     {% include partials/newsletter.html %}
 
     <p>
-      Thanks for reading!
+      Спасибо за прочтение!
     </p>
 
     <p class="madeby">
-      Made by <a href="https://jgthms.com/" target="_blank">@jgthms</a>
+      Сделано <a href="https://jgthms.com/" target="_blank">@jgthms</a>
+      Перевел <a href="https://github.com/xfranklin" target="_blank">xfranklin</a>
     </p>
   </div>
 </div>
@@ -1576,40 +1577,40 @@ layout: default
 <aside id="sides" class="sides">
   <div id="sideConcepts" class="side">
     <div class="side-title">
-      <span class="stamp is-concept">concepts</span>
+      <span class="stamp is-concept">концепции</span>
     </div>
     <div id="sideFunctions" class="side-item">
-      <span class="side-word is-concept">Functions</span>
+      <span class="side-word is-concept">Функции</span>
     </div>
     <div id="sideVariables" class="side-item">
-      <span class="side-word is-concept">Variables</span>
+      <span class="side-word is-concept">Переменные</span>
     </div>
     <div id="sideConditionals" class="side-item">
-      <span class="side-word is-concept">Conditionals</span>
+      <span class="side-word is-concept">условные выражения</span>
     </div>
     <div id="sideLoops" class="side-item">
-      <span class="side-word is-concept">Loops</span>
+      <span class="side-word is-concept">Циклы</span>
     </div>
   </div>
 
   <div id="sideTypes" class="side">
     <div class="side-title">
-      <span class="stamp is-type">types</span>
+      <span class="stamp is-type">типы</span>
     </div>
     <div id="sideStrings" class="side-item">
-      <span class="side-word is-type">Strings</span>
+      <span class="side-word is-type">Строки</span>
     </div>
     <div id="sideNumbers" class="side-item">
-      <span class="side-word is-type">Numbers</span>
+      <span class="side-word is-type">Числа</span>
     </div>
     <div id="sideObjects" class="side-item">
-      <span class="side-word is-type">Objects</span>
+      <span class="side-word is-type">Объекты</span>
     </div>
     <div id="sideArrays" class="side-item">
-      <span class="side-word is-type">Arrays</span>
+      <span class="side-word is-type">Массивы</span>
     </div>
     <div id="sideBooleans" class="side-item">
-      <span class="side-word is-type">Booleans</span>
+      <span class="side-word is-type">Булевый</span>
     </div>
   </div>
 </aside>
