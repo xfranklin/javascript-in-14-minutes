@@ -1,8 +1,8 @@
-# JavaScript in 14 minutes
+# JavaScript за 14 минут
 
 <a href="https://jgthms.com/javascript-in-14-minutes/"><img src="https://raw.githubusercontent.com/jgthms/javascript-in-14-minutes/master/images/javascript-in-14-minutes.png" alt="JavaScript in 14 minutes" style="max-width:100%;" width="600" height="315"></a>
 
-Learn the basics of JavaScript in 14 minutes with this interactive tutorial! 😃
+Изучите основы JavaScript за 14 минут с помощью этого интерактивного учебника! 😃
 
 ## Copyright and license
 
