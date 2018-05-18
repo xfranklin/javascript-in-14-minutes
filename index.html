@@ -151,7 +151,7 @@ layout: default
 <div id="step2" class="step">
   <div class="content">
     {% include partials/gj.html %}
-    <p>Вы только что использовали <code>alert()</code>, нативную <strong>JavaScript функцию</strong> которая есть в каждом браузере.</p>
+    <p>Вы только что использовали <code>alert()</code>, нативную <strong>JavaScript функцию</strong>, которая есть в каждом браузере.</p>
 
     <p>Но что вы <a onclick="showStep(3);"> сделали</a>?</p></div>
   </div>
@@ -184,7 +184,7 @@ layout: default
       </div>
     </div>
 
-    <p>Иногда в функций нет параметров<br>
+    <p>Иногда у функций нет параметров<br>
     Иногда есть несколько<br>
     Большинство из параметров необходимы, но некоторые могут быть пропущены</p>
 
@@ -199,9 +199,9 @@ layout: default
   <div class="content">
     <h2>Строки <span class="stamp is-type">тип</span></h2>
 
-    <p>Когда вы обрабатываете текст, вы используете <strong>строки</strong>, которые представляют из себя <em>символы</em>. В нашем случае мы используем последовательность из <strong>12 символов</strong>: <code>Hello World!</code>. Строка включает в себя все буквы верхнего и нижнего регистров, пробелы, и восклицательный знак.</p>
+    <p>Когда вы обрабатываете текст, вы используете <strong>строки</strong>, которые состоят из <em>символов</em>. В нашем случае мы используем последовательность из <strong>12 символов</strong>: <code>Hello World!</code>. Строка включает в себя все буквы верхнего и нижнего регистров, пробелы, и восклицательный знак.</p>
 
-    <p>Чтобы определить, где строка <em>начинаеться</em> и где она <em>заканчиваеться</em>, вам надо обернуть их в <strong>кавычки</strong> (одинарные<code>'</code> или двойные <code>"</code>).</p>
+    <p>Чтобы определить, где строка <em>начинается</em> и где она <em>заканчивается</em>, вам надо обернуть их в <strong>кавычки</strong> (одинарные<code>'</code> или двойные <code>"</code>).</p>
 
     <p>Когда вы определили строку<code>'Hello World!'</code></p>
 
@@ -239,9 +239,9 @@ layout: default
     <p>Отметьте несколько вещей:</p>
 
     <ul>
-      <li>вы используете  <strong>операторы</strong> <code>+</code> и <code>*</code></li>
+      <li>вы использовали  <strong>операторы</strong> <code>+</code> и <code>*</code></li>
       <li><strong>математический порядок</strong> соблюдается: первым считается <code>5 * 3</code>, затем <code>9 + 15</code></li>
-      <li><strong>пробелы</strong> вокруг символа <code>*</code> не влияет на результат; они здесь для того чтобы помочь нам (людям!) <em>читать</em> код.</li>
+      <li><strong>пробелы</strong> вокруг символа <code>*</code> не влияет на результат; они здесь, для того чтобы помочь нам (людям!) <em>читать</em> код.</li>
     </ul>
 
     <p>Числа используются <a onclick="showStep(7);">во многих местах</a>.</p>
@@ -298,12 +298,12 @@ layout: default
     <p>К примеру, <code>window</code> имеет еще такие свойства:</p>
 
     <ul>
-      <li><code>window.origin</code> которое являеться строкой</li>
-      <li><code>window.scrollY</code> которое являеться числом</li>
-      <li><code>window.location</code> которое являеться объектом</li>
+      <li><code>window.origin</code> это строка</li>
+      <li><code>window.scrollY</code> это число</li>
+      <li><code>window.location</code> это объект</li>
     </ul>
 
-    <p>Если <code>window</code> объект, который содержит <code>location</code> который являеться другим объектом, это означает что <a onclick="showStep(10);">JavaScript поддерживает вложенность объектов</a>…</p>
+    <p>Если <code>window</code> объект, который содержит <code>location</code> который является другим объектом, это означает что <a onclick="showStep(10);">JavaScript поддерживает вложенность объектов</a>…</p>
   </div>
 </div>
 
@@ -353,7 +353,7 @@ layout: default
   <div class="content">
     <h2>Методы <span class="stamp is-info">информация</span></h2>
 
-    <p>Когда <strong>свойством</strong> объекта является <strong>функция</strong>, она называеться <strong>методом</strong>.</p>
+    <p>Когда <strong>свойством</strong> объекта является <strong>функция</strong>, она называется <strong>методом</strong>.</p>
 
     <p>На самом деле, <code>alert()</code> которую мы использовали до сих пор, это метод объекта <code>window</code>!</p>
 
@@ -831,7 +831,7 @@ layout: default
     </p>
 
     <p>
-      Для обработки <strong> противоположного случая </strong>, когда имя хоста не равно <code>'xfranklin.tk' </code>, мы можем использовать <strong>оператор</strong> "<em>не равно</em>" <code>!=</code>:
+      Для обработки <strong> противоположного случая</strong>, когда имя хоста не равно <code>'xfranklin.tk'</code>, мы можем использовать <strong>оператор</strong> "<em>не равно</em>" <code>!=</code>:
     </p>
 
     {% capture snippet %}{% include snippets/snippet_if_not.md %}{% endcapture %}
@@ -1389,7 +1389,7 @@ layout: default
     <h3>Изучите HTML и CSS</h3>
 
     <p>
-      JavaScript составляет лишь одну треть от того, что делает веб-страницу! Вам также нужно знать <strong>HTML</strong> и <strong>CSS</strong>.
+      JavaScript составляет лишь одну треть от того, что нужно знать для создания веб-страниц! Вам также нужно знать <strong>HTML</strong> и <strong>CSS</strong>.
     </p>
 
     <p>
